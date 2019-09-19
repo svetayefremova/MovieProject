@@ -24,6 +24,10 @@ const styles = StyleSheet.create({
   itemCol: {
     flex: 1,
   },
+  itemRightCol: {
+    alignItems: "flex-start",
+    paddingLeft: 12
+  },
   title: {
     paddingBottom: 8,
   },
@@ -61,7 +65,7 @@ const MovieItem = (props: MovieItemProps) => {
                   style={styles.image}
                 />
               </View>
-              <View style={styles.itemCol}>
+              <View style={[styles.itemCol, styles.itemRightCol]}>
                 <Text
                   style={[styles.title, { color: themes[theme].primaryText }]}
                 >
