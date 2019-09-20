@@ -16,7 +16,7 @@ class AnimatedItem extends React.Component<AnimatedItemProps> {
     scaleValue: new Animated.Value(0),
   };
 
-  componentDidMount() {
+  public componentDidMount() {
     Animated.timing(this.state.scaleValue, {
       toValue: 1,
       duration: 600,
@@ -24,7 +24,7 @@ class AnimatedItem extends React.Component<AnimatedItemProps> {
     }).start();
   }
 
-  render() {
+  public render() {
     return (
       <Animated.View style={{ opacity: this.state.scaleValue }}>
         {this.props.children}

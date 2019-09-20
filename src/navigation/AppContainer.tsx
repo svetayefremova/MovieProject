@@ -60,13 +60,13 @@ class App extends React.Component<{}> {
     theme: "light",
   };
 
-  toggleTheme = () => {
+  private toggleTheme = () => {
     this.setState(({ theme }: { theme: string }) => ({
       theme: theme === "light" ? "dark" : "light",
     }));
   };
 
-  render() {
+  public render() {
     return (
       <ThemeContext.Provider value={this.state.theme}>
         <StatusBar
